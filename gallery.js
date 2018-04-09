@@ -63,8 +63,22 @@ function swapPhoto() {
 }
 
 
-$(document).ready( function() {
-	
+$(document).ready( function() 
+{
+	$('img.moreIndicator').click(function() 
+	{
+		
+		if ( $(this).hasClass("rot90") ) 
+		{
+			$(this).addClass("rot270");
+			
+		}
+		else
+		{
+			$(this).removeClass("rot270").addClass("rot90")
+		}
+		
+	});
 	
 });	
 	
