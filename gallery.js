@@ -80,7 +80,27 @@ $(document).ready( function()
 		
 	});
 	
-	
+	$('#prevPhoto').click(function() 
+	{
+		
+		mLastFrameTime = 0;
+		
+		if (mCurrentIndex > 0)
+		{
+			mCurrentIndex = mCurrentIndex - 1;
+		}
+		else
+		{
+			
+			mCurrentIndex = mImages.length - 1;
+
+			
+		}
+		
+		
+		swapPhoto();
+			
+	});
 	
 	$('#nextPhoto').click(function() 
 	{
