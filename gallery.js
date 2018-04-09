@@ -73,12 +73,16 @@ $(document).ready( function()
 		
 		if ( $(this).hasClass("rot90") ) 
 		{
+			$(this).removeClass("rot90");
 			$(this).addClass("rot270");
+			$( "div.details" ).fadeToggle( "slow", "linear" );
 			
 		}
 		else
 		{
-			$(this).removeClass("rot270").addClass("rot90")
+			$(this).removeClass("rot270")
+			$(this).addClass("rot90");
+			$( "div.details" ).fadeToggle( "slow", "linear" );
 		}
 		
 	});
