@@ -59,7 +59,16 @@ function swapPhoto() {
 		
 	}
 	console.log('swap photo');
+	
 }
+
+
+$(document).ready( function() {
+	
+	
+});	
+	
+
 
 // Counter for the mImages array
 var mCurrentIndex = 0;
