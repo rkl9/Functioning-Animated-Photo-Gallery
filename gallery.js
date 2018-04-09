@@ -65,6 +65,9 @@ function swapPhoto() {
 
 $(document).ready( function() 
 {
+	// This initially hides the photos' metadata information
+	$('.details').eq(0).hide();
+	
 	$('img.moreIndicator').click(function() 
 	{
 		
@@ -163,12 +166,7 @@ mRequest.onreadystatechange = function()
     };
 
 
-$(document).ready( function() {
-	
-	// This initially hides the photos' metadata information
-	$('.details').eq(0).hide();
-	
-});
+
 
 window.addEventListener('load', function() {
 	
