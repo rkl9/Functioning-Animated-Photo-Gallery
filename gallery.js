@@ -132,9 +132,12 @@ var mImages = [];
 // Holds the retrived JSON information
 var mJson;
 
+
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'images.json'
+var mUrl = 'images.json';
+var json = 'extra.json';
+
 
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
@@ -142,7 +145,14 @@ var mUrl = 'images.json'
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
+
+function extraJSON() 
+{
+  return location.search.split('?json=')[1];
+}	
+
 mRequest.open("GET", mUrl);
+
 mRequest.send();
 
 mRequest.onreadystatechange = function() 
@@ -168,6 +178,10 @@ mRequest.onreadystatechange = function()
             }
         }
     };
+
+
+
+
 
 
 
