@@ -80,6 +80,14 @@ $(document).ready( function()
 		
 	});
 	
+	
+	
+	$('#nextPhoto').click(function() 
+	{
+		mLastFrameTime = 0;
+		swapPhoto();
+	});
+	
 });	
 	
 
