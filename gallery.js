@@ -97,8 +97,10 @@ $(document).ready( function()
 			
 		}
 		
-		
-		swapPhoto();
+	$("#photo").attr("src", mImages[mCurrentIndex].img);	
+	$(".location").text("Location: " + mImages[mCurrentIndex].theLocation);
+	$(".description").text("Description: " + mImages[mCurrentIndex].description);
+	$(".date").text("Date: " + mImages[mCurrentIndex].date);
 			
 	});
 	
