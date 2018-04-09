@@ -115,8 +115,7 @@ $(document).ready( function()
 // Counter for the mImages array
 var mCurrentIndex = 0;
 
-// XMLHttpRequest variable
-var mRequest = new XMLHttpRequest();
+
 
 // Array holding GalleryImage objects (see below).
 var mImages = [];
@@ -131,6 +130,35 @@ var mUrl = 'images.json'
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
+
+// XMLHttpRequest variable
+var mRequest = new XMLHttpRequest();
+mRequest.open("GET", mUrl);
+mRequest.send();
+
+mRequest.onreadystatechange = function() 
+{
+	
+		
+        if (mRequest.readyState == 4 && mRequest.status == 200) 
+		{
+            try 
+			{
+                mJson = JSON.parse(mRequest.responseText);
+                for (var i = 0; i < mJson.images.length; i++) 
+				{
+		        	var myLine = mJson.images[i];
+		        	mImages.push(new GalleryImage(myLine.imgLocation, myLine.description, myLine.date, myLine.imgPath));
+		        	
+		    	}
+            } 
+			catch(err) 
+			{
+                console.log(err.message + " in " + mRequest.responseText);
+                return;
+            }
+        }
+    };
 
 
 $(document).ready( function() {
