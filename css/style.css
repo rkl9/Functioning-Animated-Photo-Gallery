@@ -18,6 +18,14 @@ body {
 	position: relative;
 }
 
+#photo {
+	
+
+    
+    height: 389px;
+    width: 518px;
+}
+
 .photoHolder {
 	position: relative;
 	width: 80%;
@@ -35,6 +43,7 @@ body {
 	 margin-left: auto;
     margin-right: auto;
 	display: block;
+	top: -60px;
 }
 
 .thumbnail {
@@ -61,6 +70,7 @@ body {
 #nextPhoto {
 	height: 42px;
 	width: 42px;
+	float: right;
 }
 
 .details p {
